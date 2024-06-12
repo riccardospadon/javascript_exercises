@@ -13,3 +13,9 @@ const isPalindrome = (string) => {
 }
 console.log("La parola 'ciao' è palindroma?", isPalindrome('ciao')) // La parola 'ciao' è palindroma? false
 console.log("La parola 'anna' è palindroma?", isPalindrome('anna')) // La parola 'anna' è palindroma? true
+
+// 3 Scrivi una funzione chiamata findMax che prenda un array di numeri come input e restituisca il numero più grande nell'array
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const findMax = (array) => {
+    let max = array[0]
+}
