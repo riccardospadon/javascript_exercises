@@ -45,4 +45,12 @@ const primiDieciFibonacci = fibonacci(10)
 console.log(primiDieciFibonacci) // [0, 1,  1,  2,  3, 5, 8, 13, 21, 34]
 
 
-// 5
+// 5 Crea un oggetto che rappresenti un libro, con proprietà come titolo, autore, anno
+// e un metodo per stampare tutte le informazioni del libro.
+let libro = {
+    titolo: "Harry Potter e la pietra filosofale",
+    autore: "J.K. Rowling",
+    anno: 1997
+}
+
+console.log(libro) // { titolo: 'Harry Potter e la pietra filosofale', autore: 'J.K. Rowling', anno: 1997 }
