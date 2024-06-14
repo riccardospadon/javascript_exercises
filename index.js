@@ -58,11 +58,11 @@ console.log(libro) // { titolo: 'Harry Potter e la pietra filosofale', autore: '
 
 // 6 Scrivi un programma che cambi il colore di sfondo di una pagina web quando l'utente clicca su un pulsante
 let cambiaColoreSfondo = () => {
-    const coloreSfondo = '#543654'
+    let coloreSfondo = '#543654'
     document.body.style.backgroundColor = coloreSfondo
 }
-const cambiaColore = document.querySelector('#cambiaColore')
-cambiaColore = addEventListener('click', function(){
+let cambiaColore = document.querySelector('#cambiaColore')
+cambiaColore = addEventListener('click', function() {
     cambiaColoreSfondo()
 })
 
@@ -72,4 +72,42 @@ cambiaColore = addEventListener('click', function(){
 let reverseString = (string) => {
     return string.split('').reverse().join('');
 }
-console.log(reverseString("ciao"))
+console.log(reverseString("ciao")) // oaic
+
+
+// 8 Scrivi una funzione chiamata removeDuplicates che prenda un array di numeri come input
+// e restituisca un nuovo array con i duplicati rimossi.
+const array1 = [1, 2, 3, 4, 5, 6, 7, 7, 7, 8, 8, 9, 10]
+const removeDuplicates = (array) => {
+    let senzaDuplicati = []
+    for (let i = 0; i < array.length; i++) {
+        if(senzaDuplicati.indexOf(array[i]) === -1) {
+            senzaDuplicati.push(array[i])
+        }
+    }
+    return senzaDuplicati
+}
+console.log("array CON duplicati:", array1, "array SENZA duplicati:",removeDuplicates(array1))
+// array CON duplicati: [1, 2, 3, 4, 5, 6, 7, 7, 7, 8, 8, 9, 10] array SENZA duplicati: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+// 9 Crea un oggetto che rappresenti una persona, con proprietà come nome, età, sesso e un metodo che restituisca una stringa 
+// con tutte le informazioni della persona
+const persona = {
+    nome: "Riccardo",
+    età: "27",
+    sesso: "uomo"
+}
+console.log(`${persona.nome} è un ${persona.sesso} di ${persona.età} anni.`)
+// Riccardo è un uomo di 27 anni.
+
+
+// 10 Crea una pagina HTML con un pulsante e un contatore. Ogni volta che l'utente clicca sul pulsante,
+// il contatore dovrebbe incrementare di uno e il nuovo valore dovrebbe essere visualizzato nella pagina
+const counter = document.querySelector('.number')
+const increase = document.querySelector('#increaseButton')
+let count = 0
+increase.addEventListener('click', function () {
+    count++
+    counter.textContent = count
+})
