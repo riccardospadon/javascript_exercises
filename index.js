@@ -54,3 +54,14 @@ let libro = {
 }
 
 console.log(libro) // { titolo: 'Harry Potter e la pietra filosofale', autore: 'J.K. Rowling', anno: 1997 }
+
+
+// 6 Scrivi un programma che cambi il colore di sfondo di una pagina web quando l'utente clicca su un pulsante
+let cambiaColoreSfondo = () => {
+    const coloreSfondo = '#543654'
+    document.body.style.backgroundColor = coloreSfondo
+}
+const cambiaColore = document.querySelector('#cambiaColore')
+cambiaColore = addEventListener('click', function(){
+    cambiaColoreSfondo()
+})
