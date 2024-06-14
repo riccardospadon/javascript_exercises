@@ -65,3 +65,11 @@ const cambiaColore = document.querySelector('#cambiaColore')
 cambiaColore = addEventListener('click', function(){
     cambiaColoreSfondo()
 })
+
+
+// 7 Scrivi una funzione chiamata reverseString che prenda una stringa come input e restituisca la stringa invertita.
+// Ad esempio, se l'input è "ciao", la funzione dovrebbe restituire "oaic".
+let reverseString = (string) => {
+    return string.split('').reverse().join('');
+}
+console.log(reverseString("ciao"))
