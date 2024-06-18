@@ -1,7 +1,7 @@
 // 1 Scrivi un programma che calcoli l'area di un rettangolo.
 // Chiedi all'utente di inserire la lunghezza e la larghezza del rettangolo e quindi calcola e stampa l'area.
 let lunghezza = 5 // prompt('Inserisci la lunghezza del rettangolo: ')
- let larghezza = 6 // prompt('Inserisci la larghezza del rettangolo: ') 
+let larghezza = 6 // prompt('Inserisci la larghezza del rettangolo: ') 
 let area = lunghezza * larghezza
 console.log("L'area del rettangolo avendo lunghezza", lunghezza, "e larghezza", larghezza, "è:", area)
 // L'area del rettangolo avendo lunghezza 5 e larghezza 6 è: 30
@@ -111,3 +111,33 @@ increase.addEventListener('click', function () {
     count++
     counter.textContent = count
 })
+
+
+// 11 Scrivi una funzione che simuli il caricamento di dati da un server remoto utilizzando una promessa.
+// La funzione dovrebbe restituire una promessa che si risolve con dei dati fittizi dopo un certo intervallo di tempo
+const simulaCaricamentoDati = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const dati = [
+                { id: 1, nome: 'Prodotto 1', prezzo: '10' },
+                { id: 2, nome: 'Prodotto 2', prezzo: '20' },
+                { id: 3, nome: 'Prodotto 3', prezzo: '30' },
+            ]
+            resolve(dati)
+        }, 2000)
+    })
+}
+console.log('Inizio caricamento...')
+simulaCaricamentoDati()
+.then((dati) => {
+    console.log('Dati caricati:', dati)
+})
+.catch((errore) => {
+    console.error('Si è verificato un errore durante il caricamento...', errore)
+})
+//Inizio caricamento...
+// Dati caricati: [
+//    { id: 1, nome: 'Prodotto 1', prezzo: '10' },
+//    { id: 2, nome: 'Prodotto 2', prezzo: '20' },
+//    { id: 3, nome: 'Prodotto 3', prezzo: '30' }
+//  ]
