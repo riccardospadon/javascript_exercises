@@ -124,7 +124,7 @@ const simulaCaricamentoDati = () => {
                 { id: 3, nome: 'Prodotto 3', prezzo: '30' },
             ]
             resolve(dati)
-        }, 2000)
+        }, 0)
     })
 }
 console.log('Inizio caricamento...')
@@ -141,3 +141,12 @@ simulaCaricamentoDati()
 //    { id: 2, nome: 'Prodotto 2', prezzo: '20' },
 //    { id: 3, nome: 'Prodotto 3', prezzo: '30' }
 //  ]
+
+
+// 12 Scrivi una funzione chiamata flattenArray che prenda un array di array come input
+// e restituisca un singolo array con tutti gli elementi degli array annidati.
+const flattenArray = (arrays) => {
+    return arrays.flat(Infinity)
+}
+const arrayDiArray = [[1, 2], [3, 4], [5, 6]]
+console.log(flattenArray(arrayDiArray)) // [1, 2, 3, 4, 5, 6]
