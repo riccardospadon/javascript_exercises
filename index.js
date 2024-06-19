@@ -176,4 +176,13 @@ console.log(`La sottrazione tra i numeri ${y} e ${x} è uguale a ${sottrazione}`
 // la sottrazione tra i numeri 4 e 12 è uguale a -8
 
 
-// 17
+// 17 Crea un oggetto di Javascript che ti rappresenti (come proprietà usa nome, cognome e hobby)
+const meStesso = {
+    nome: 'Riccardo',
+    cognome: 'Spadon',
+    hobby: 'Programmare e pallavolo'
+}
+console.log(meStesso) // { 'nome': 'Riccardo', 'cognome': 'Spadon', 'hobby': 'Programmare e pallavolo' }
+
+
+// 18 
