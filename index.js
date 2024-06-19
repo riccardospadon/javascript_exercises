@@ -57,14 +57,14 @@ console.log(libro) // { titolo: 'Harry Potter e la pietra filosofale', autore: '
 
 
 // 6 Scrivi un programma che cambi il colore di sfondo di una pagina web quando l'utente clicca su un pulsante
-let cambiaColoreSfondo = () => {
-    let coloreSfondo = '#543654'
-    document.body.style.backgroundColor = coloreSfondo
-}
-let cambiaColore = document.querySelector('#cambiaColore')
-cambiaColore = addEventListener('click', function() {
-    cambiaColoreSfondo()
-})
+// let cambiaColoreSfondo = () => {
+//     let coloreSfondo = '#543654'
+//     document.body.style.backgroundColor = coloreSfondo
+// }
+// let cambiaColore = document.querySelector('#cambiaColore')
+// cambiaColore = addEventListener('click', function() {
+//     cambiaColoreSfondo()
+// })
 
 
 // 7 Scrivi una funzione chiamata reverseString che prenda una stringa come input e restituisca la stringa invertita.
@@ -104,13 +104,13 @@ console.log(`${persona.nome} è un ${persona.sesso} di ${persona.età} anni.`)
 
 // 10 Crea una pagina HTML con un pulsante e un contatore. Ogni volta che l'utente clicca sul pulsante,
 // il contatore dovrebbe incrementare di uno e il nuovo valore dovrebbe essere visualizzato nella pagina
-const counter = document.querySelector('.number')
-const increase = document.querySelector('#increaseButton')
-let count = 0
-increase.addEventListener('click', function () {
-    count++
-    counter.textContent = count
-})
+// const counter = document.querySelector('.number')
+// const increase = document.querySelector('#increaseButton')
+// let count = 0
+// increase.addEventListener('click', function () {
+//     count++
+//     counter.textContent = count
+// })
 
 
 // 11 Scrivi una funzione che simuli il caricamento di dati da un server remoto utilizzando una promessa.
@@ -150,3 +150,10 @@ const flattenArray = (arrays) => {
 }
 const arrayDiArray = [[1, 2], [3, 4], [5, 6]]
 console.log(flattenArray(arrayDiArray)) // [1, 2, 3, 4, 5, 6]
+
+
+// 13 Scrivi il codice necessario ad effettuare un'addizione (una somma) dei numeri 12 e 20 e salvando il risultato in una variabile
+let a = 12
+let b = 20
+let somma1 = a + b
+console.log(`La somma tra i numeri ${a} e ${b} è uguale a ${somma1}`)
