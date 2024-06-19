@@ -156,4 +156,24 @@ console.log(flattenArray(arrayDiArray)) // [1, 2, 3, 4, 5, 6]
 let a = 12
 let b = 20
 let somma1 = a + b
-console.log(`La somma tra i numeri ${a} e ${b} è uguale a ${somma1}`)
+console.log(`La somma tra i numeri ${a} e ${b} è uguale a ${somma1}`) // La somma tra i numeri 12 e 20 è uguale a 32
+
+
+// 14 Crea una variabile di nome "x" e assegna ad essa il numero 12
+const x = 12
+console.log(x) // 12
+
+
+// 15 Crea una variabile chiamata "name" e assegna ad essa il tuo nome, sotto forma di stringa
+let name = 'Riccardo'
+console.log(name) // Riccardo
+
+
+// 16 Esegui una sottrazione tra i numeri 4 e la variabile "x" appena dichiarata (che contiene il numero 12)
+const y = 4
+let sottrazione = y - x
+console.log(`La sottrazione tra i numeri ${y} e ${x} è uguale a ${sottrazione}`)
+// la sottrazione tra i numeri 4 e 12 è uguale a -8
+
+
+// 17
