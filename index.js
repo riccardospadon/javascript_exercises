@@ -185,4 +185,21 @@ const meStesso = {
 console.log(meStesso) // { 'nome': 'Riccardo', 'cognome': 'Spadon', 'hobby': 'Programmare e pallavolo' }
 
 
-// 18 
+// 18 Crea due variabili: "name1" e "name2". Assegna a name1 la stringa "john", e assegna a name2 la stringa "John" (con la J maiuscola!).
+// Verifica che name1 sia diversa da name2 (suggerimento: è la stessa cosa verificare che la loro uguaglianza sia falsa).
+// Infine, verifica che la loro uguaglianza diventi true se entrambe vengono trasformate in lowercase (senza cambiare il valore di name2!).
+// NON HAI BISOGNO DI UN BLOCCO IF/ELSE. E' sufficiente utilizzare console.log() e gli operatori logici. SUGGERIMENTO: usa .toLowerCase()
+const name1 = {
+    name: 'John'
+}
+
+const name2 = {
+    name: 'john'
+}
+
+let verifyName = name1 === name2
+console.log(verifyName) // false
+verifyName = verifyName.toString()
+console.log(typeof verifyName) // string
+verifyName = name1.name.toLowerCase() === name2.name.toLowerCase()
+console.log(verifyName) // true
