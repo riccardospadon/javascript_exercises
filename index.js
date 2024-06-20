@@ -237,4 +237,22 @@ else if (num >= 20){
 }
 
 
-// 
+// 21 Mostra i numeri da 0 a 10 (incluso) in ordine ascendente, ma evitando di mostrare i numeri 3 e 8
+// (suggerimento: ripassa l'uso di "continue")
+for (let i = 0; i <= 10; i++) {
+    if (i === 3 || i === 8){
+        continue
+    }
+    console.log(i) // 1, 2, 4, 5, 6, 7, 9, 10
+}
+
+
+// 22 Scrivi un ciclo in Javascript per iterare da 0 a 15. Per ciascun elemento, il ciclo deve controllare che il valore corrente sia pari
+// o dispari. Suggerimento: ripassa operatore modulo
+for (let i = 0; i <= 15; i++){
+    if(i % 2 === 0){
+        console.log(`${i} è un numero pari`) // 0 è un numero pari; 2 è un numero pari; ecc...
+    } else {
+        console.log(`${i} è un numero dispari`) // 1 è un numero dispari; 3 è un numero dispari; ecc...
+    }
+}
