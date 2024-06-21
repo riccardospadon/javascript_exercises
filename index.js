@@ -303,4 +303,26 @@ if(blackFriday <= 50){
 console.log(blackFriday) // (20+10+5) - (20+10+5)*0.2 = 35 - 7 = 28 (<50) + 10 = 38
 
 
-// 26 
+// 26 Usa un operatore ternario per assegnare ad una variabile chiamata "gender" i valori "male" o "female".
+// La scelta deve essere basata sul valore di un'altra variabile booleana chiamata isMale.
+// Es.: se isMale è vero, il valore di gender deve essere "male"
+let gender
+let isMale = false
+isMale ? (gender == "male") : (gender == "female")
+console.log(isMale) // false
+
+
+// 27 Scrivi un algoritmo che iteri i numeri da 1 a 100, stampandoli in console.
+// Se un valore tuttavia è multiplo di 3, stampa al suo posto la parola "Fizz" e se il numero è multiplo di 5, stampa "Buzz".
+// Se le condizioni si verificano entrambe, stampa "FizzBuzz"
+for(let i = 1; i <= 100; i++){
+    if(i % 3 && i % 5 == 0){
+        console.log("FizzBuzz")
+    }else if(i % 3 == 0){
+        console.log("Fizz")
+    } else if (i % 5 == 0){
+        console.log("Buzz")
+    } else {
+        console.log(i)
+    }
+}
