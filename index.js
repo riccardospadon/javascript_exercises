@@ -256,3 +256,18 @@ for (let i = 0; i <= 15; i++){
         console.log(`${i} è un numero dispari`) // 1 è un numero dispari; 3 è un numero dispari; ecc...
     }
 }
+
+
+// 23 Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8
+// oppure se la loro addizione/sottrazione sia uguale a 8
+let e = 3
+let f = 5
+if(e === 8 && f === 8) {
+    console.log('Entrambi i numeri inseriti sono uguale a 8!')
+} else if(e === 8 || f === 8) {
+    console.log('Uno dei due numeri inseriti è uguale a 8!')
+} else if(e + f === 8 || f + e === 8) {
+    console.log('La somma dei numeri inseriti è uguale a 8!')
+} else if(e - f === 8 || f - e === 8) {
+    console.log('La differenza tra i numeri inseriti è uguale a 8!')
+}
