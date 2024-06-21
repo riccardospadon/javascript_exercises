@@ -271,3 +271,36 @@ if(e === 8 && f === 8) {
 } else if(e - f === 8 || f - e === 8) {
     console.log('La differenza tra i numeri inseriti è uguale a 8!')
 }
+
+
+// 24  Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShopphingCart".
+// C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita
+// (altrimenti la spedizione ha un costo fisso pari a 10). Crea un algoritmo che determini l'ammontare
+// totale che deve essere addebitato all'utente per il checkout.
+let carrello = {
+    prodotto1: 20,
+    prodotto2: 10,
+    prodotto3: 5
+}
+let spedizione = 0
+carrello = carrello.prodotto1 + carrello.prodotto2 + carrello.prodotto3
+let totalShopphingCart = carrello + spedizione
+if(totalShopphingCart <= 50){
+    spedizione = 10
+    totalShopphingCart = totalShopphingCart + spedizione
+}
+console.log(totalShopphingCart) // (20+10+5)+10 = 35(< 50)+10 = 45
+
+
+// 25  Oggi è il black friday e viene applicato il 20% su ogni prodotto. Modifica la risposta precedente includendo questa nuova promozione
+//nell'algoritmo, determinando, usando l'algoritmo del codice precedente, se le spedizioni siano gratuite oppure no e calcolando il totale
+let totaleSconto = carrello * 0.2
+let blackFriday = carrello - totaleSconto
+if(blackFriday <= 50){
+    spedizione = 10
+    blackFriday = blackFriday + spedizione
+}
+console.log(blackFriday) // (20+10+5) - (20+10+5)*0.2 = 35 - 7 = 28 (<50) + 10 = 38
+
+
+// 26 
