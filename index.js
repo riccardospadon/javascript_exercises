@@ -326,3 +326,41 @@ for(let i = 1; i <= 100; i++){
         console.log(i)
     }
 }
+
+
+// 28  Scrivi una funzione chiamata "crazySum" che riceve due numeri interi come parametri. La funzione deve ritornare la somma di quei
+// due valori, ma se il solo valore è lo stesso allora deve ritornare la loro somma moltiplicata per 3
+let g = 10
+let h = 10
+let crazySum = g + h
+if(g === h){
+    crazySum = crazySum * 3
+}
+console.log(crazySum) // 10 + 10 = 20*3 = 60 || 10 + 12 = 22
+
+
+// 29 Scrivi una funzione chiamata "boundary", che accetta un numero intero come parametro e ritorna true se tale parametro è incluso
+// tra 20 e 100 o se è esattamente uguale a 400
+let numberOfBoundary = 400
+let boundary = () => {
+    if ((numberOfBoundary >= 20 && numberOfBoundary <= 100) || (numberOfBoundary === 400)) {
+        return true
+    }
+    return false
+}
+console.log(`Boundary true or false? ${numberOfBoundary}`, boundary())
+
+
+// 30 Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni
+// lettera iniziale di ogni parola
+const upperFirst = (string) => {
+    let parole = string.split(' ')
+    let frase = ""
+    let parola = ""
+    for (let i = 0; i < parole.length; i++) {
+        parola = parole[i].split('')[0].toUpperCase() + parole[i].slice(1) + ' '
+        frase = frase + parola
+    }
+    return frase
+}
+console.log(upperFirst("daje roma daje")) // Daje Roma Daje
