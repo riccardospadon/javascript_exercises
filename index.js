@@ -401,3 +401,35 @@ let crazyDiff = (n1, n2) => {
     return tot
 }
 console.log(crazyDiff(-1))
+
+
+// 34 Scrivi una funzione chiamata "codify" che accetta una stringa come parametro. La funzione deve aggiungere la parola "code" 
+// all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code"
+// allora deve ritornarla senza modifiche.
+let codify = (string) => {
+    let string2 = string + "code"
+    if (string === "code") {
+        return string2 = string
+    }
+    return string2
+}
+console.log(codify('ciao')) // ciaocode
+console.log(codify('code')) // code
+
+
+// 35 Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
+// La funzione deve controllare che tale parametro sia un multiplo di 3 o di 7, e in tal caso tornare true; altrimenti deve tornare false.
+let check3and7 = (n) => {
+    if(n % 3 === 0 || n % 7 === 0) {
+        return true
+    }
+    return false
+}
+console.log(check3and7(21))
+
+
+// 36 Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
+let cutString = (string) => {
+    return string.slice(1, string.length -1)
+}
+console.log(cutString('Buonasera')) // uonaser
