@@ -364,3 +364,40 @@ const upperFirst = (string) => {
     return frase
 }
 console.log(upperFirst("daje roma daje")) // Daje Roma Daje
+
+
+// 31  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
+const l1 = 10
+const l2 = 12
+let areaRettangolo = l1 * l2
+if(l1 === l2){
+    console.log(`L'area del quadrato aventi i lati l1 uguale a ${l1} e l2 uguale a ${l2} è di ${areaRettangolo}`)
+} else {
+    console.log(`L'area del rettangolo aventi i lati l1 uguale a ${l1} e l2 uguale a ${l2} è di ${areaRettangolo}`)
+}
+
+
+// 32 Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n
+// e ritorna un array contenente n numeri random contenuti tra 0 e 10.
+const giveMeRandom = (n) => {
+    const numbers = []
+    for(let i = 0; i < n; i++){
+        const random = Math.floor(Math.random() * 11)
+        numbers.push(random)
+    }
+    return numbers
+}
+console.log(giveMeRandom(6))
+
+
+// 33 Scrivi una funzione chiamata "crazyDiff" che calcola la differenza assoluta tra un numero fornito e 19.
+// Se il valore calcolato è più grande di 19, la funzione deve tornare tale risultato moltiplicato per 3.
+let crazyDiff = (n1, n2) => {
+    n2 = 19
+    let tot = Math.abs(n1 - n2)
+    if (tot > 19){
+        return tot * 3
+    }
+    return tot
+}
+console.log(crazyDiff(-1))
