@@ -433,3 +433,47 @@ let cutString = (string) => {
     return string.slice(1, string.length -1)
 }
 console.log(cutString('Buonasera')) // uonaser
+
+
+// 37 Crea una funzione che controlli due numeri interi. Ritorna 'true' se uno dei due è 50 o se la somma dei due è 50
+const sommaNumber = (number1, number2) => {
+    if(number1 === 50 || number2 === 50 || number1 + number2 === 50){
+        return true
+    }
+    return false
+}
+console.log(sommaNumber(10, 10))
+
+
+// 38 Crea una funzione che rimuova il carattere ad una specifica posizione da una stringa.
+// Passa la stringa e la posizione come parametri e ritorna la stringa modificata
+const removeCharacter = (string, position) =>{
+    let array = string.split('')
+    array.splice(position, 1)
+    return array.join('')
+}
+console.log(removeCharacter('Riccardo', 5)) // Riccado
+
+
+// 39 Crea una funzione che controlli se due numeri siano compresi tra 40 e 60 o tra 70 e 100.
+// Ritorna 'true' se rispecchiano queste condizioni, altrimenti ritorna 'false'
+let check = (a, b) => {
+    if((a >= 40 && a <= 60) && (b >= 40 && b <= 60) || (a >= 70 && a <= 100) && (b >= 70 && b <= 100)) {
+        return true
+    }
+    return false
+}
+console.log(check(40, 100))
+
+
+// 40 Crea una funzione che accetti un nome di città come parametro e ritorni il nome stesso se inizia con 'Los' o 'New',
+// altrimenti ritorni 'false'
+let checkCity = (string) => {
+    if(string.startsWith('Los') || string.startsWith('New')){
+        return string
+    }
+    return false
+}
+console.log(checkCity('New York')) // New York
+console.log(checkCity('Latina')) //false
+console.log(checkCity('Los Angeles')) // Los Angeles
