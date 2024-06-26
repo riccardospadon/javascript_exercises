@@ -524,3 +524,58 @@ console.log(angoli(50)) // acuto
 console.log(angoli(100)) // ottuso
 console.log(angoli(90)) // retto
 console.log(angoli(180)) // piatto
+
+
+// 44 Crea una funzione che crei un acronimo a partire da una frase. Es. 'Fabbrica Italiana Automobili Torino' deve ritornare 'FIAT'
+let acronimo = (string) => {
+    let array = string.split(' ')
+    let x = ''
+    for (let i = 0; i < array.length; i++) {
+        let parola = array[i]
+        x += parola.charAt(0)
+    }
+    return x.toUpperCase()
+}
+console.log(acronimo('senatus popolus quirities romani')) //SPQR
+
+
+// 45 Partendo da una stringa (passata come parametro), ritorna il carattere più usato nella stringa stessa.
+let piuUsato = (string) => {
+    const frequenza = {}
+    for(let i = 0; i < string.length; i++) {
+        let carattere = string[i]
+        if(frequenza[carattere]){
+            frequenza[carattere]++
+
+        } else {
+            frequenza[carattere] = 1
+        }
+
+        let carattereMassimo = ''
+        let frequenzaMassima = 0
+        for(let carattere in frequenza){
+            if(frequenza[carattere] > frequenzaMassima){
+                carattereMassimo = carattere
+                frequenzaMassima = frequenza[carattere]
+            }
+        }
+        return carattereMassimo
+    }
+}
+console.log(piuUsato('aaoaaoaaaaajjjdrwc')) // a
+
+
+// 46  Controlla che due stringhe passate come parametri siano gli anagrammi l’una dell’altra.
+// Ignora punteggiatura e spazi e ricordate di rendere la stringa tutta in minuscolo.
+// Se le due parole sono anagrammi, ritorna true , altrimenti ritorna `false`.
+const anagrammi = (string1, string2) => {
+    const stringaPulita1 = string1.replace(/[^\w]/g, '').toLowerCase();
+    const stringaPulita2 = string2.replace(/[^\w]/g, '').toLowerCase();
+    if(stringaPulita1.length !== stringaPulita2.length){
+        return false;
+    }
+    const arrayPulito1 = stringaPulita1.split('').sort().join('');
+    const arrayPulito2 = stringaPulita2.split('').sort().join('');
+    return arrayPulito1 === arrayPulito2;
+}
+console.log(anagrammi('notizia', 'tiziano')) // true
