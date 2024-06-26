@@ -477,3 +477,50 @@ let checkCity = (string) => {
 console.log(checkCity('New York')) // New York
 console.log(checkCity('Latina')) //false
 console.log(checkCity('Los Angeles')) // Los Angeles
+
+
+// 41 Crea una funzione che calcoli e ritorni la somma di tutti gli elementi di un array. L'array deve essere passato come parametro
+const sommaElementi = (array) => {
+    let parametro = 0
+    for (let i = 0; i < array.length; i++) {
+        const elemento = array[i]
+        parametro += elemento
+    }
+    return parametro
+}
+console.log(sommaElementi([10, 11, 12])) // 33
+
+
+// 42 Crea una funzione che controlli che un array NON contenga i numeri 1 o 3. Se NON li contiene, ritorna 'true', altrimenti ritorna 'false'
+const not1or3 = (array) => {
+    if(!array.includes(1) && !array.includes(3)){
+        return true
+    }
+    return false
+}
+console.log(not1or3([3, 2, 7])); // false
+
+
+// 43 Crea una funzione per trovare il tipo di un angolo i cui gradi sono passati come parametro:
+// Angolo acuto: meno di 90° => ritorna "acuto"
+// Angolo ottuso: tra 90° e i 180° => ritorna "ottuso"
+// Angolo retto: 90° => ritorna "retto"
+// Angolo piatto: 180° => ritorna "piatto"
+const angoli = (deg) => {
+    if(deg < 90){
+        return 'acuto'
+    }
+    if(deg > 90 && deg < 180){
+        return 'ottuso'
+    }
+    if(deg == 90){
+        return 'retto'
+    }
+    if(deg == 180){
+        return 'piatto'
+    }
+}
+console.log(angoli(50)) // acuto
+console.log(angoli(100)) // ottuso
+console.log(angoli(90)) // retto
+console.log(angoli(180)) // piatto
