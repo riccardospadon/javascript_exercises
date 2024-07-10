@@ -662,3 +662,23 @@ const arrayPari = (array) => {
     return array.filter((number) => number % 2 === 0)
 }
 console.log(arrayPari([1, 2, 3, 4, 5])) // [2, 4]
+
+
+// 54  Scrivi una funzione che prende un array di oggetti rappresentanti persone (con proprietà name e age)
+// e ritorna un nuovo array contenente solo le persone maggiorenni (age >= 18)
+const persone = [
+    {
+        name: 'Riccardo',
+        age: 27
+    },
+    
+    {
+        name: 'Elisa',
+        age: 16
+    }
+]
+
+const soloMaggiorenni = (persone) => {
+    return persone.filter((persona) => persona.age >= 18)
+}
+console.log(soloMaggiorenni(persone))   //  { name: 'Riccardo', age: 27 } ] (età di Elisa minore di 18)
