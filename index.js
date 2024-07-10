@@ -579,3 +579,29 @@ const anagrammi = (string1, string2) => {
     return arrayPulito1 === arrayPulito2;
 }
 console.log(anagrammi('notizia', 'tiziano')) // true
+
+
+// 47 Partendo da una lista di possibili anagrammi e da una parola (entrambi passati come parametri),
+// ritorna un nuovo array contenente tutti gli anagrammi corretti della parola data.
+const trovaAnagrammi = (parola, listaAnagrammi) => {
+    const stringaPulita = (string) => {
+        return string.replace(/[^\w]/g, '').toLowerCase();
+    }
+    
+    const verificaAnagrammi = (string1, string2) => {
+        const stringaPulita1 = stringaPulita(string1)
+        const stringaPulita2 = stringaPulita(string2)
+        if(stringaPulita1.length !== stringaPulita2.length){
+            return false
+        }
+
+        const arrayPulito1 = stringaPulita1.split('').sort().join('')
+        const arrayPulito2 = stringaPulita2.split('').sort().join('')
+        return arrayPulito1 === arrayPulito2
+    }
+
+    const anagrammiGiusti = listaAnagrammi.filter(anagramma => verificaAnagrammi(parola, anagramma))
+    return anagrammiGiusti
+}
+
+console.log(trovaAnagrammi('cartine', ['carenti', 'incerta', 'espatrio']))
