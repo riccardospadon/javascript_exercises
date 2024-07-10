@@ -604,14 +604,18 @@ const trovaAnagrammi = (parola, listaAnagrammi) => {
     return anagrammiGiusti
 }
 
-console.log(trovaAnagrammi('cartine', ['carenti', 'incerta', 'espatrio']))
+console.log(trovaAnagrammi('cartine', ['carenti', 'incerta', 'espatrio'])) // [ 'carenti', 'incerta' ]
 
 
 // 48  Partendo da una stringa passata come parametro, ritorna `true` se la stringa è palindroma o `false` se non lo è.
 const palindroma2 = (stringa) => {
     return stringa.split('').reverse().join('') === stringa
 }
-console.log(palindroma2('yamamay'))
+console.log(palindroma2('yamamay')) // true
 
 
-// 49
+// 49 Partendo da un numero intero (dai parametri) ritorna un numero che contenga le stesse cifre, ma in ordine contrario.
+const numeroInverso = (numero) => {
+    return Number(String(numero).split('').reverse().join(''))
+}
+console.log(numeroInverso(1015)) // 5101
