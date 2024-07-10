@@ -694,4 +694,9 @@ document.querySelector('#aggiungiLista').addEventListener('click', function(){
 // funziona, ovviamente, se si fa partire il live server del file index.html presente in questa repository
 
 
-// 
+// 56 Scrivi una funzione asincrona che attende 2 secondi prima di loggare un messaggio nella console.
+async function messaggioRitardato() {
+    await new Promise (resolve => {setTimeout(resolve, 2000)})
+    console.log('Questo messaggio è ritardato di 2 secondi rispetto a tutto quello che viene stampato in console')
+}
+messaggioRitardato();
