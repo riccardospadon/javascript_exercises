@@ -605,3 +605,13 @@ const trovaAnagrammi = (parola, listaAnagrammi) => {
 }
 
 console.log(trovaAnagrammi('cartine', ['carenti', 'incerta', 'espatrio']))
+
+
+// 48  Partendo da una stringa passata come parametro, ritorna `true` se la stringa è palindroma o `false` se non lo è.
+const palindroma2 = (stringa) => {
+    return stringa.split('').reverse().join('') === stringa
+}
+console.log(palindroma2('yamamay'))
+
+
+// 49
