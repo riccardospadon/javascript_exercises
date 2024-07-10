@@ -686,11 +686,11 @@ console.log(soloMaggiorenni(persone))   //  { name: 'Riccardo', age: 27 } ] (et�
 
 // 55 Scrivi un codice JavaScript che aggiunge un nuovo elemento <li> a una lista non ordinata (<ul>)
 // con id "myList" quando si clicca un pulsante con id "myButton".7
-document.querySelector('#aggiungiLista').addEventListener('click', function(){
-    const li = document.createElement('li');
-    li.textContent = 'New Item'
-    document.querySelector('#myList').appendChild(li)
-})
+// document.querySelector('#aggiungiLista').addEventListener('click', function(){
+//     const li = document.createElement('li');
+//     li.textContent = 'New Item'
+//     document.querySelector('#myList').appendChild(li)
+// })
 // funziona, ovviamente, se si fa partire il live server del file index.html presente in questa repository
 
 
@@ -699,4 +699,19 @@ async function messaggioRitardato() {
     await new Promise (resolve => {setTimeout(resolve, 2000)})
     console.log('Questo messaggio è ritardato di 2 secondi rispetto a tutto quello che viene stampato in console')
 }
-messaggioRitardato();
+messaggioRitardato();   // *dopo 2 sec*: Questo messaggio è ritardato di 2 secondi rispetto a tutto quello che viene stampato in console
+
+
+// 57 Scrivi una funzione che prende un array di numeri e ritorna un nuovo array dove ogni numero è moltiplicato per 2.
+const arrayPer2 = (array) => {
+    return array.map(numero => numero * 2)
+}
+console.log(arrayPer2([1, 2, 3, 4]))    // [2, 4, 6, 8]
+
+
+// 58 Scrivi una funzione che verifica se un dato input (stringa) è un numero valido.
+const numeroValido = (input) => {
+    return !isNaN(input) && input.trim() !== ''
+}
+console.log(numeroValido('12')) // true
+console.log(numeroValido('ao')) // false
