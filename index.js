@@ -619,3 +619,39 @@ const numeroInverso = (numero) => {
     return Number(String(numero).split('').reverse().join(''))
 }
 console.log(numeroInverso(1015)) // 5101
+
+
+// 50 Crea una funzione che, data una stringa come parametro, ritorni la stessa stringa, ma al contrario.
+const stringaContraria = (string) => {
+    return string.split('').reverse().join('')
+}
+console.log(stringaContraria('riccardo')) //odraccir
+
+
+// 51 Crea una funzione che accetti un array e un numero Y come parametro. Dividi l’array in sotto-array aventi lunghezza Y.
+const sottoArray = (array, Y) => {
+    let nuovoArray = []
+    let miniArray = 0
+    for(let i = 0; i < array.length; i++) {
+        if(i % Y == 0) {
+            miniArray++
+        }
+    }
+    console.log(miniArray)
+    
+    let inizio = 0
+    for(let x = 0; x < miniArray; x++) {
+        let pezzo = array.slice(inizio, inizio + Y)
+        inizio += Y
+        nuovoArray.push(pezzo)
+    }
+    return nuovoArray
+}
+console.log(sottoArray([1, 2, 3, 4, 5], 3)) // [1, 2, 3], [4, 5]
+
+
+// 52 Scrivi una funzione che prende un array di numeri e ritorna la somma di tutti gli elementi.
+const sommaArray = (array) => {
+    return array.reduce((somma, numero) => somma + numero, 0)
+}
+console.log(sommaArray([1, 2, 3, 4, 5])) // 1 + 2 + 3 + 4 + 5 = 15
