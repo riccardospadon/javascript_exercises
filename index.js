@@ -655,3 +655,10 @@ const sommaArray = (array) => {
     return array.reduce((somma, numero) => somma + numero, 0)
 }
 console.log(sommaArray([1, 2, 3, 4, 5])) // 1 + 2 + 3 + 4 + 5 = 15
+
+
+// 53 Scrivi una funzione che prende un array di numeri e ritorna un nuovo array contenente solo i numeri pari.
+const arrayPari = (array) => {
+    return array.filter((number) => number % 2 === 0)
+}
+console.log(arrayPari([1, 2, 3, 4, 5])) // [2, 4]
