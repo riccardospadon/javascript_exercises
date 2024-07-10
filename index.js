@@ -682,3 +682,16 @@ const soloMaggiorenni = (persone) => {
     return persone.filter((persona) => persona.age >= 18)
 }
 console.log(soloMaggiorenni(persone))   //  { name: 'Riccardo', age: 27 } ] (età di Elisa minore di 18)
+
+
+// 55 Scrivi un codice JavaScript che aggiunge un nuovo elemento <li> a una lista non ordinata (<ul>)
+// con id "myList" quando si clicca un pulsante con id "myButton".7
+document.querySelector('#aggiungiLista').addEventListener('click', function(){
+    const li = document.createElement('li');
+    li.textContent = 'New Item'
+    document.querySelector('#myList').appendChild(li)
+})
+// funziona, ovviamente, se si fa partire il live server del file index.html presente in questa repository
+
+
+// 
