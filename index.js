@@ -725,7 +725,7 @@ const fattoriale = (number) => {
         return number * fattoriale(number - 1)
     }
 }
-console.log(fattoriale(5))
+console.log(fattoriale(5))  // 5! = 120
 
 
 // 60 Scrivi una funzione che controlla se un numero è pari o dispari.
@@ -736,14 +736,15 @@ const pariODispari = (n) => {
         console.log(`${n} è un numero dispari`)
     }
 }
-pariODispari(5)
+pariODispari(5) // 5 è un numero dispari
+pariODispari(6) // 6 è un numero pari
 
 
 // 61 Scrivi una funzione che restituisce il massimo tra due numeri.
 const maxNumber = (x, y) => {
     console.log('Il numero massimo tra', x, 'e', y, 'è:', Math.max(x, y));
 }
-maxNumber(5, 3)
+maxNumber(5, 3) // Il numero massimo tra 5 e 3 è: 5
 
 
 // 62 Crea un ciclo for che stampa i numeri da 1 a 10.
@@ -752,7 +753,7 @@ const da1a10 = () => {
         console.log(i)
     }
 }
-da1a10()
+da1a10()    // 1, 2, ..., 10
 
 
 // 63 Crea un ciclo while che stampa i numeri pari da 1 a 20
@@ -763,4 +764,19 @@ const da1a20 = () => {
         i++
     }
 }
-da1a20()
+da1a20() // 1, 2, ..., 20
+
+
+// 64 Crea un ciclo do-while che chiede all'utente di inserire un numero fino a quando non inserisce un numero pari.
+let numeroInserito
+
+do {
+    numeroInserito = parseInt(prompt('Inserisci un numero: '))
+    if(isNaN(numeroInserito)){
+        alert("Valore non valido. Inserisci un numero.")
+    } else if(numeroInserito % 2 !== 0) {
+        alert("Il numero inserito è dispari. Inserisci un numero pari.")
+    }
+} while (isNaN(numeroInserito) || numeroInserito % 2 !== 0)
+
+console.log("Hai inserito un numero pari:", numeroInserito) // testato su compiler online in quanto vscode non permette di usare "prompt"
