@@ -744,3 +744,12 @@ const maxNumber = (x, y) => {
     console.log('Il numero massimo tra', x, 'e', y, 'è:', Math.max(x, y));
 }
 maxNumber(5, 3)
+
+
+// 62 Crea un ciclo for che stampa i numeri da 1 a 10.
+const da1a10 = () => {
+    for(let i = 1; i <= 10; i++) {
+        console.log(i)
+    }
+}
+da1a10()
