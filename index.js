@@ -785,4 +785,22 @@ da1a20() // 1, 2, ..., 20
 // 65 Crea un array di nomi di città e stampali in una riga.
 const citta = ["Latina", "Aprilia", "Roma"]
 const stringaCitta = citta.join(", ")
-console.log(stringaCitta) //
+console.log(stringaCitta) // Latina, Aprilia, Roma
+
+
+// 66 Crea un oggetto con le proprietà nome, cognome ed età e accedi a una proprietà.
+let persona2 = {
+    nome: 'Riccardo',
+    cognome: 'Spadon',
+    età: 27
+}
+console.log(persona2.nome)
+console.log(persona2.cognome)
+console.log(persona2.età)
+
+
+// 67 Aggiungi un elemento a un array e rimuovilo da un array.
+citta.push("Castelli Romani") // array preso dall'esercizio 65; .push() per aggiungere un elemento nell'array
+console.log(citta)  // [ 'Latina', 'Aprilia', 'Roma', 'Castelli Romani' ]
+citta.splice(0, 1)  // .splice() per togliere un elemento nell'array (indice 0, un elemento)
+console.log(citta)  // [ 'Aprilia', 'Roma', 'Castelli Romani' ]
