@@ -768,15 +768,21 @@ da1a20() // 1, 2, ..., 20
 
 
 // 64 Crea un ciclo do-while che chiede all'utente di inserire un numero fino a quando non inserisce un numero pari.
-let numeroInserito
+// let numeroInserito
 
-do {
-    numeroInserito = parseInt(prompt('Inserisci un numero: '))
-    if(isNaN(numeroInserito)){
-        alert("Valore non valido. Inserisci un numero.")
-    } else if(numeroInserito % 2 !== 0) {
-        alert("Il numero inserito è dispari. Inserisci un numero pari.")
-    }
-} while (isNaN(numeroInserito) || numeroInserito % 2 !== 0)
+// do {
+//     numeroInserito = parseInt(prompt('Inserisci un numero: '))
+//     if(isNaN(numeroInserito)){
+//         alert("Valore non valido. Inserisci un numero.")
+//     } else if(numeroInserito % 2 !== 0) {
+//         alert("Il numero inserito è dispari. Inserisci un numero pari.")
+//     }
+// } while (isNaN(numeroInserito) || numeroInserito % 2 !== 0)
 
-console.log("Hai inserito un numero pari:", numeroInserito) // testato su compiler online in quanto vscode non permette di usare "prompt"
+// console.log("Hai inserito un numero pari:", numeroInserito) // testato su compiler online in quanto vscode non permette di usare "prompt"
+
+
+// 65 Crea un array di nomi di città e stampali in una riga.
+const citta = ["Latina", "Aprilia", "Roma"]
+const stringaCitta = citta.join(", ")
+console.log(stringaCitta) //
