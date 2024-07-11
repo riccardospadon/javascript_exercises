@@ -737,3 +737,10 @@ const pariODispari = (n) => {
     }
 }
 pariODispari(5)
+
+
+// 61 Scrivi una funzione che restituisce il massimo tra due numeri.
+const maxNumber = (x, y) => {
+    console.log('Il numero massimo tra', x, 'e', y, 'è:', Math.max(x, y));
+}
+maxNumber(5, 3)
