@@ -728,4 +728,12 @@ const fattoriale = (number) => {
 console.log(fattoriale(5))
 
 
-// 60
+// 60 Scrivi una funzione che controlla se un numero è pari o dispari.
+const pariODispari = (n) => {
+    if(n % 2 === 0){
+        console.log(`${n} è un numero pari`)
+    } else { 
+        console.log(`${n} è un numero dispari`)
+    }
+}
+pariODispari(5)
