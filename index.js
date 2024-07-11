@@ -715,3 +715,17 @@ const numeroValido = (input) => {
 }
 console.log(numeroValido('12')) // true
 console.log(numeroValido('ao')) // false
+
+
+// 59 Scrivi una funzione che calcola il fattoriale di un numero.
+const fattoriale = (number) => {
+    if(number === 0 || number === 1){
+        return 1
+    } else {
+        return number * fattoriale(number - 1)
+    }
+}
+console.log(fattoriale(5))
+
+
+// 60
