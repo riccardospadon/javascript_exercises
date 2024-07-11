@@ -753,3 +753,14 @@ const da1a10 = () => {
     }
 }
 da1a10()
+
+
+// 63 Crea un ciclo while che stampa i numeri pari da 1 a 20
+const da1a20 = () => {
+    let i = 1
+    while(i <= 20){
+        console.log(i)
+        i++
+    }
+}
+da1a20()
