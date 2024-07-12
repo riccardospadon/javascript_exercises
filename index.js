@@ -804,3 +804,35 @@ citta.push("Castelli Romani") // array preso dall'esercizio 65; .push() per aggi
 console.log(citta)  // [ 'Latina', 'Aprilia', 'Roma', 'Castelli Romani' ]
 citta.splice(0, 1)  // .splice() per togliere un elemento nell'array (indice 0, un elemento)
 console.log(citta)  // [ 'Aprilia', 'Roma', 'Castelli Romani' ]
+
+
+// 68 Dato un array di numeri, stampare in console il numero minimo, il numero massimo e la media dei numeri che compongono l'array
+const numeri = [48, 85, 874, 5884, 26, 54, 1, 10000]
+
+let minimo = numeri[0]
+let massimo = numeri[0]
+let somma = 0
+
+for (let i = 0; i < numeri.length; i++) {
+    const numeroCorrente = numeri[i]
+
+    if (numeroCorrente < minimo){
+       minimo = numeroCorrente
+    }
+
+    if (numeroCorrente > massimo){
+        massimo = numeroCorrente
+    }
+
+    somma = somma + numeroCorrente
+}
+
+const media = somma / numeri.length
+
+const risultati = {
+    minimo: minimo,
+    massimo: massimo,
+    media: media
+}
+
+console.log(risultati)
