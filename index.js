@@ -836,3 +836,21 @@ const risultati = {
 }
 
 console.log(risultati)
+
+
+// 69 Invertire una stringa: Scrivi una funzione che prenda una stringa come input e restituisca la stringa invertita
+const invertiStringa = (string) => {
+    return string.split('').reverse().join('')
+}
+console.log(invertiStringa('hello'))    // olleh
+
+
+// 70 Somma di un array: Scrivi una funzione che prenda un array di numeri e restituisca la somma di tutti gli elementi
+const sommaArray2 = (array) => {
+    let somma = 0
+    for(let i = 0; i < array.length; i++) {
+        somma += array[i]
+    }
+    return somma
+}
+console.log(sommaArray2([1, 2, 3, 4]))  // 10 (1+2+3+4)
