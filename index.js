@@ -854,3 +854,19 @@ const sommaArray2 = (array) => {
     return somma
 }
 console.log(sommaArray2([1, 2, 3, 4]))  // 10 (1+2+3+4)
+
+
+// 71 Numeri pari: Scrivi una funzione che prenda un array di numeri e restituisca un nuovo array contenente solo i numeri pari.
+const numeriPari = (array) => {
+    let arrayPari = []
+    for (let i = 0; i < array.length; i++) {
+        if(array[i] % 2 === 0) {
+            arrayPari.push(array[i])
+        }
+    }
+    return arrayPari
+}
+console.log(numeriPari([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))    // [2, 4, 6, 8, 10]
+
+
+// 72 Fattoriale: Scrivi una funzione che calcoli il fattoriale di un numero dato.
