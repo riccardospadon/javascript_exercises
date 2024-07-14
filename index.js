@@ -870,3 +870,24 @@ console.log(numeriPari([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))    // [2, 4, 6, 8, 10]
 
 
 // 72 Fattoriale: Scrivi una funzione che calcoli il fattoriale di un numero dato.
+const fattoriale2 = (n) => {
+    if(n === 0 || n === 1) {
+        return 1
+    } else {
+        return n * fattoriale(n - 1)
+    }
+}
+console.log(fattoriale2(10))    // 10! = 3.628.800
+
+
+// 73 Rimuovere duplicati: Scrivi una funzione che prenda un array e restituisca un nuovo array senza duplicati
+const rimuoviDuplicati = (array) => {
+    let noDuplicati = []
+    for(let i = 0; i < array.length; i++) {
+        if(noDuplicati.indexOf(array[i]) === -1) {
+            noDuplicati.push(array[i])
+        }
+    }
+    return noDuplicati
+}
+console.log(rimuoviDuplicati([1, 2, 2, 3, 4, 4, 5]))    // [1, 2, 3, 4, 5]
